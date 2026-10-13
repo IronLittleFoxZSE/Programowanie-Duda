@@ -168,7 +168,7 @@ List<int> wherePositiveV2(List<int> ints)
     return returnList;
 }
 
-List<int> where(List<int> ints, Func<int, bool> check)
+List<int> where1(List<int> ints, Func<int, bool> check)
 {
     List<int> returnList = new List<int>();
 
@@ -179,10 +179,44 @@ List<int> where(List<int> ints, Func<int, bool> check)
     return returnList;
 }
 
+List<string> where2(List<string> strings, Func<string, bool> check)
+{
+    List<string> returnList = new List<string>();
+
+    foreach (string str in strings)
+        if (check(str))
+            returnList.Add(str);
+
+    return returnList;
+}
+
+List<T> where<T>(List<T> collection, Func<T, bool> check)
+{
+    List<T> returnList = new List<T>();
+
+    foreach (T item in collection)
+        if (check(item))
+            returnList.Add(item);
+
+    return returnList;
+}
+
 secondEvenNumbers = whereEven(list);
-secondEvenNumbers = where(list, checkEven);
-List<int> positiveNumbers = where(list, checkPositive);
-List<int> oddNumbers = where(list, checkOdd);
+secondEvenNumbers = where1(list, checkEven);
+secondEvenNumbers = where1(list, checkEven);
+List<int> positiveNumbers = where1(list, checkPositive);
+//List<int> oddNumbers = where1(list, checkOdd);
+List<int> oddNumbers = where<int>(list, checkOdd);
+
+List<string> strings = ["Ala", "Ola", "Iwona"];
+
+bool checkWidthL(string str)
+{
+    return str.Contains("l");
+}
+
+//List<string> strings1 = where2(strings, checkWidthL);
+List<string> strings1 = where<string>(strings, checkWidthL);
 
 //KISS
 //DRY
