@@ -1,10 +1,9 @@
 ﻿
-
 using System.Diagnostics;
 
 int x = 54;
-String y = new string("Ala");
-String z = y;
+string y = new string("Ala");
+string z = y;
  
 
 
@@ -91,11 +90,7 @@ delegata();
 
 //-----------------------------------------------
 
-List<int> list = new List<int>();
-list.Add(15);
-list.Add(7);
-list.Add(88);
-list.Add(-5);
+List<int> list = [15, 7, 88, -5];
 
 
 List<int> evenNumbers = new List<int>();
@@ -206,7 +201,8 @@ secondEvenNumbers = where1(list, checkEven);
 secondEvenNumbers = where1(list, checkEven);
 List<int> positiveNumbers = where1(list, checkPositive);
 //List<int> oddNumbers = where1(list, checkOdd);
-List<int> oddNumbers = where<int>(list, checkOdd);
+//List<int> oddNumbers = where<int>(list, checkOdd);
+List<int> oddNumbers = where(list, checkOdd);
 
 List<string> strings = ["Ala", "Ola", "Iwona"];
 
@@ -216,7 +212,8 @@ bool checkWidthL(string str)
 }
 
 //List<string> strings1 = where2(strings, checkWidthL);
-List<string> strings1 = where<string>(strings, checkWidthL);
+//List<string> strings1 = where<string>(strings, checkWidthL);
+List<string> strings1 = where(strings, checkWidthL);
 
 //KISS
 //DRY
