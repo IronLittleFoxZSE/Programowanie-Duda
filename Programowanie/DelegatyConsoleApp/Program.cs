@@ -202,7 +202,8 @@ secondEvenNumbers = where1(list, checkEven);
 List<int> positiveNumbers = where1(list, checkPositive);
 //List<int> oddNumbers = where1(list, checkOdd);
 //List<int> oddNumbers = where<int>(list, checkOdd);
-List<int> oddNumbers = where(list, checkOdd);
+//List<int> oddNumbers = where(list, checkOdd);
+List<int> oddNumbers = where(list, (int n) => { return n % 2 == 1;});
 
 List<string> strings = ["Ala", "Ola", "Iwona"];
 
@@ -211,9 +212,17 @@ bool checkWidthL(string str)
     return str.Contains("l");
 }
 
+//Func<string, bool> delegataCheckWidthL = (string str) => { return str.Contains("l"); };
+//Func<string, bool> delegataCheckWidthL = (str) => { return str.Contains("l"); };
+Func<string, bool> delegataCheckWidthL = str => { return str.Contains("l"); };
+
 //List<string> strings1 = where2(strings, checkWidthL);
 //List<string> strings1 = where<string>(strings, checkWidthL);
-List<string> strings1 = where(strings, checkWidthL);
+//List<string> strings1 = where(strings, checkWidthL);
+//List<string> strings1 = where(strings, delegataCheckWidthL);
+//List<string> strings1 = where(strings, (string str) => { return str.Contains("l"); });
+//List<string> strings1 = where(strings, (str) => { return str.Contains("l"); });
+List<string> strings1 = where(strings, str => { return str.Contains("l"); });
 
 //KISS
 //DRY
