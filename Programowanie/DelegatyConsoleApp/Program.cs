@@ -4,7 +4,7 @@ using System.Diagnostics;
 int x = 54;
 string y = new string("Ala");
 string z = y;
- 
+
 
 
 
@@ -34,7 +34,7 @@ void showMessage3(string text, int x)
 {
     Console.WriteLine(text);
 }
-Action<string,int> zm4 = showMessage3;
+Action<string, int> zm4 = showMessage3;
 
 showMessage3("Olek", 15);
 zm4("Ilona", 87);
@@ -54,7 +54,7 @@ int GetValue2(string s)
     return 0;
 }
 
-Func<string,int> zm6 = GetValue2;
+Func<string, int> zm6 = GetValue2;
 
 x = GetValue2("sdgas");
 x = zm6("zsdfgasd");
@@ -82,7 +82,7 @@ if (x > 5)
 else
     delegata = f2;
 
-delegata = (x>5) ? f1 : f2;
+delegata = (x > 5) ? f1 : f2;
 
 delegata();
 
@@ -95,7 +95,7 @@ List<int> list = [15, 7, 88, -5];
 
 List<int> evenNumbers = new List<int>();
 
-foreach(int number in list)
+foreach (int number in list)
     if (number % 2 == 0)
         evenNumbers.Add(number);
 
@@ -203,7 +203,7 @@ List<int> positiveNumbers = where1(list, checkPositive);
 //List<int> oddNumbers = where1(list, checkOdd);
 //List<int> oddNumbers = where<int>(list, checkOdd);
 //List<int> oddNumbers = where(list, checkOdd);
-List<int> oddNumbers = where(list, (int n) => { return n % 2 == 1;});
+List<int> oddNumbers = where(list, (int n) => { return n % 2 == 1; });
 
 List<string> strings = ["Ala", "Ola", "Iwona"];
 
@@ -222,7 +222,22 @@ Func<string, bool> delegataCheckWidthL = str => { return str.Contains("l"); };
 //List<string> strings1 = where(strings, delegataCheckWidthL);
 //List<string> strings1 = where(strings, (string str) => { return str.Contains("l"); });
 //List<string> strings1 = where(strings, (str) => { return str.Contains("l"); });
-List<string> strings1 = where(strings, str => { return str.Contains("l"); });
+//List<string> strings1 = where(strings, str => { return str.Contains("l"); });
+/*
+List<string> strings1 = where(
+    strings, 
+    str => 
+    { 
+        return str.Contains("l"); 
+    });
+*/
+List<string> strings1 = where(strings, str => str.Contains("l"));
+
+//Action przyklad = () => { Console.WriteLine("Hello"); };
+Action przyklad = () => Console.WriteLine("Hello");
+
+//Func<int> przyklad2 = () => { return 18; };
+Func<int> przyklad2 = () => 18;
 
 //KISS
 //DRY
