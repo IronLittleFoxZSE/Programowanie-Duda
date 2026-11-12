@@ -1,5 +1,12 @@
 <Solution>
+  <Folder Name="/MAUI/">
+    <Project Path="FirstMauiApp/FirstMauiApp.csproj" Id="66dec3c7-206c-4ce5-a87b-8c3da65c5542">
+      <Deploy Solution="Debug|*" />
+    </Project>
+  </Folder>
   <Project Path="DelegatyConsoleApp/DelegatyConsoleApp.csproj" />
   <Project Path="FirstTests/FirstTests.csproj" Id="7487de24-a86f-405f-8528-390383b68579" />
   <Project Path="LinqConsoleApp/LinqConsoleApp.csproj" Id="aa663bf2-be96-46e2-999d-62ef12216d04" />
+  <Project Path="OrderPaymentsConsoleApp.Tests/OrderPaymentsConsoleApp.Tests.csproj" Id="eef87040-14d2-4a24-811b-d7e805900818" />
+  <Project Path="OrderPaymentsConsoleApp/OrderPaymentsConsoleApp.csproj" />
 </Solution>

@@ -17,18 +17,22 @@ namespace FirstTests
 
         }
 
-        [Fact]
-        public void Sqrt_PositivePerfectSquare_ReturnsSquareRoot()
+        [Theory]
+        [InlineData(9, 3)]
+        [InlineData(16, 5)]
+        [InlineData(25, 5)]
+        public void Sqrt_PositivePerfectSquare_ReturnsSquareRoot(double number, double expected)
         {
             //arrange
-            double number = 9;
 
             //act
             double result = Math.Sqrt(number);
 
             //assert
-            Assert.Equal(3, result);
+            Assert.Equal(expected, result);
 
         }
+
+
     }
 }
