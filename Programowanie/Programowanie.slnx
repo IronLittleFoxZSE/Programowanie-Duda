@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/MAUI/">
+    <Project Path="ControlsMauiApp/ControlsMauiApp.csproj" />
     <Project Path="FirstMauiApp/FirstMauiApp.csproj" Id="66dec3c7-206c-4ce5-a87b-8c3da65c5542">
       <Deploy Solution="Debug|*" />
     </Project>
