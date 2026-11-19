@@ -4,6 +4,9 @@
     <Project Path="FirstMauiApp/FirstMauiApp.csproj" Id="66dec3c7-206c-4ce5-a87b-8c3da65c5542">
       <Deploy Solution="Debug|*" />
     </Project>
+    <Project Path="SimpleCalculatorMauiApp/SimpleCalculatorMauiApp.csproj" Id="c423f43a-273f-4f48-81bf-8488ab65f93b">
+      <Deploy Solution="Debug|*" />
+    </Project>
   </Folder>
   <Project Path="DelegatyConsoleApp/DelegatyConsoleApp.csproj" />
   <Project Path="FirstTests/FirstTests.csproj" Id="7487de24-a86f-405f-8528-390383b68579" />

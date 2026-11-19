@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="SimpleCalculatorMauiApp.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}">
+
+    <StackLayout>
+        <Label FontSize="20" Text="Podaj pierwszą liczbę" />
+        <Entry x:Name="firstNumberEntry" />
+        <Label FontSize="20" Text="Podaj drugą liczbę" />
+        <Entry x:Name="secondNumberEntry" />
+        <Button Clicked="Button_Clicked" Text="Oblicz" />
+        <Label x:Name="resultLabel" />
+
+        <Entry BindingContext="{x:Reference secondResultLabel}" Text="{Binding Text}" />
+        <Slider BindingContext="{x:Reference secondResultLabel}"
+                Maximum="20"
+                Minimum="5"
+                Value="{Binding FontSize}" />
+        <Label x:Name="secondResultLabel" Text="" />
+
+        <Label FontSize="20" Text="Podaj pierwszą liczbę" />
+        <Entry Text="{Binding FirstNumberStr}" />
+        <Label FontSize="20" Text="Podaj drugą liczbę" />
+        <Entry Text="{Binding SecondNumberStr}" />
+        <Button Clicked="Button_Clicked_1" Text="Oblicz" />
+        <Label BackgroundColor="{Binding ResultColor}" Text="{Binding Result}" />
+        <Entry Text="{Binding Result}" TextColor="{Binding ResultColor}" />
+    </StackLayout>
+
+</ContentPage>
